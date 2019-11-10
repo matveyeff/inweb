@@ -1,0 +1,40 @@
+block config
+	include config.pug
+	include common/mixins.pug
+
+doctype html
+html(lang=lang)
+	head
+		block metatags
+			meta(charset="UTF-8")
+			meta(name="viewport", content="width=device-width, initial-scale=1.0")
+			meta(http-equiv="X-UA-Compatible", content="ie=edge")
+			meta(name="description" content=desc)
+
+			if iconspath
+				link(rel="shortcut icon" href=iconspath + "/favicon.ico" type="image/x-icon")
+				link(rel="apple-touch-icon" href=iconspath + "/apple-touch-icon.png")
+				link(rel="apple-touch-icon" sizes="57x57" href=iconspath + "/apple-touch-icon-57x57.png")
+				link(rel="apple-touch-icon" sizes="72x72" href=iconspath + "/apple-touch-icon-72x72.png")
+				link(rel="apple-touch-icon" sizes="76x76" href=iconspath + "/apple-touch-icon-76x76.png")
+				link(rel="apple-touch-icon" sizes="114x114" href=iconspath + "/apple-touch-icon-114x114.png")
+				link(rel="apple-touch-icon" sizes="120x120" href=iconspath + "/apple-touch-icon-120x120.png")
+				link(rel="apple-touch-icon" sizes="144x144" href=iconspath + "/apple-touch-icon-144x144.png")
+				link(rel="apple-touch-icon" sizes="152x152" href=iconspath + "/apple-touch-icon-152x152.png")
+				link(rel="apple-touch-icon" sizes="180x180" href=iconspath + "/apple-touch-icon-180x180.png")
+
+		title #{title}
+		block links
+			link(rel="stylesheet", href=csspath + '/main.min.css')
+	body
+		.wrapper
+			include includes/_header.pug
+			
+			block content
+
+		block scripts
+
+			if jQuery
+				script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+
+			script(src='js/script.min.js')
