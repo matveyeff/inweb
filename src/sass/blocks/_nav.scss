@@ -1,0 +1,19 @@
+.nav {
+	display: flex;
+	font-size: .9375rem;
+	&__link {
+		font-weight: 500;
+		color: $black;
+		padding: .3rem 1.5rem;
+		margin-right: 1rem;
+		transition: background-color .15s ease;
+		border-radius: 1.25rem;
+		&:hover {
+			background-color: darken($gray, 3%);
+		}
+		&.active {
+			color: $white;
+			background-color: $pink;
+		}
+	}
+}

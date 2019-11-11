@@ -1,0 +1,7 @@
+{
+	"nav": [
+		{"title": "Home", "url": "/"},
+		{"title": "Services", "url": "services.html"},
+		{"title": "Portfolio", "url": "portfolio.html"}
+	]
+}

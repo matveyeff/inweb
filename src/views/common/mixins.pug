@@ -1,0 +1,4 @@
+mixin nav(className)
+	nav(class=className)
+		each item in nav
+			a.nav__link(href=item.url class= currentURL == item.url ? 'active' : '') #{item.title}

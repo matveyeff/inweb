@@ -1,10 +1,14 @@
 header.header
 	.container
 		.header__inner
-			.row
+			.row.header__row
 				.col-lg-2
-					a.logo(href="#")
+					a.logo(href='/')
 						span.logo__prefix in
 						| Web
-				.col-lg-8 Nav
-				.col-lg-2 Lang
+				.col-lg-8
+					+nav('nav')
+				.col-lg-2
+					.lang
+						a.lang__link.active(href='#') ru
+						a.lang__link(href='#') en

@@ -33,7 +33,7 @@ const paths =  {
   build: 'build/'      	// paths.build
 };
 
-// const dataFromFile      = JSON.parse(Fs.readFileSync(paths.src + 'data/data.json'));
+const dataFromFile      = JSON.parse(Fs.readFileSync(paths.src + 'data/data.json'));
 
 function styles() {
 	return gulp.src(paths.src + 'sass/main.scss')
@@ -56,7 +56,7 @@ function styles() {
 function htmls() {
 	return gulp.src(paths.src + 'views/pages/**/*.pug')
 		.pipe(plumber())
-		.pipe(pug({ pretty: true, })) //  locals: dataFromFile || {} 
+		.pipe(pug({ pretty: true, locals: dataFromFile || {} }))
 		.pipe(prettify({indent_char: ' ', indent_size: 2}))
     .pipe(gulp.dest(paths.build));
 }
