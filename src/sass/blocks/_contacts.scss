@@ -1,0 +1,30 @@
+.contacts {
+	margin-top: 1rem;
+	&__list	{
+		display: flex;
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		margin-right: 1rem;
+		&::after {
+			content: '';
+			width: 5px;
+			height: 1px;
+			background-color: $black;
+			margin-left: 1rem;
+		}
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+	}
+	&__link {
+		color: $black;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

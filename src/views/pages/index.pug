@@ -6,3 +6,24 @@ append config
 	- currentURL  	= '/'
 
 block content
+	main.content
+		.container
+			.hero
+				.hero__text My name is
+				.hero__title John Connor
+				.hero__subtitle I do
+					span.hero__subtitle-accent  web design
+					|  and
+					span.hero__subtitle-accent  website development
+				.row
+					.col-lg-3
+						a.btn.btn--pink(href='#') Let's connect
+					.col-lg-9
+						.contacts
+							ul.contacts__list
+								li.contacts__item
+									a.contacts__link(href="tel: +12061123345") +1-206-112-3345
+								li.contacts__item
+									a.contacts__link(href="mailto: hello@inweb.com") hello@inweb.com
+		img.author(src="img/man.png", alt="man")
+		.circle
