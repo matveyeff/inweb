@@ -1,0 +1,35 @@
+.socials {
+	display: flex;
+	align-items: center;
+	&__text {
+		font-size: .75rem;
+		font-weight: 600;
+		color: $black;
+		margin-right: 1rem;
+	}
+	&__list {
+		display: flex;
+		align-items: flex-end;
+	}
+	&__item {
+		margin-right: .625rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		display: block;
+		&:hover {
+			.socials__icon {
+				fill: $black;
+			}
+		}
+	}
+	&__icon {
+		display: block;
+		width: 22px;
+		height: 22px;
+		fill: #ababab;
+		transition: fill $fast;
+	}
+}

@@ -2,3 +2,13 @@ mixin nav(className)
 	nav(class=className)
 		each item in nav
 			a.nav__link(href=item.url class= currentURL == item.url ? 'active' : '') #{item.title}
+
+mixin socials(className)
+	div(class=className)
+		span(class=className + '__text') My links
+		ul(class=className + '__list')
+			each item in socials
+				li(class=className + '__item')
+					a(href=item.url, class=className + '__link', target="_blank")
+						svg(class=className + '__icon')
+							use(xlink:href=`./img/sprite.svg#${item.title}`)

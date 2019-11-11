@@ -3,5 +3,10 @@
 		{"title": "Home", "url": "/"},
 		{"title": "Services", "url": "services.html"},
 		{"title": "Portfolio", "url": "portfolio.html"}
+	],
+	"socials": [
+		{"title": "facebook", "url": "#"},
+		{"title": "instagram", "url": "#"},
+		{"title": "youtube", "url": "#"}
 	]
 }

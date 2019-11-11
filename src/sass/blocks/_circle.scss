@@ -7,7 +7,7 @@
 	background: linear-gradient(to bottom, #f5576c, #f093fb);
 	box-shadow: 0 5px 25px rgba(0, 0, 0, .15);
 	border-radius: 57% 43% 84% 16% / 43% 37% 63% 57%;
-	animation: circleRadius 5s alternate infinite;
+	animation: circleRadius 15s alternate infinite;
 	z-index: 1;
 }
 
@@ -15,7 +15,7 @@
 	0% {
 			border-radius: 60% 40% 49% 51% / 58% 45% 55% 42%;
 	}
-	100% {
-			border-radius: 54% 46% 36% 64% / 49% 46% 54% 51% ;
+	50% {
+			border-radius: 24% 76% 25% 75% / 64% 78% 22% 36%;
 	}
 }
