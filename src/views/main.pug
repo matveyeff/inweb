@@ -32,11 +32,13 @@ html(lang=lang)
 
 			block content
 
+			include common/modal.pug
+
 			include includes/_footer.pug
 
 		block scripts
 
 			if jQuery
-				script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+				script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 
-			script(src='js/script.min.js')
+			script(src='js/main.min.js')

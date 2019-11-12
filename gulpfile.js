@@ -13,7 +13,8 @@ const prettify 					= require('gulp-html-prettify');
 
 const Fs                = require('fs');
 
-const concat 						= require('gulp-concat');
+// const concat 						= require('gulp-concat');
+const rigger            = require("gulp-rigger");
 const uglify 						= require('gulp-uglify');
 
 const rename 						= require('gulp-rename');
@@ -94,10 +95,16 @@ function svgSprite() {
 
 function scripts() {
   return gulp.src(paths.src + 'js/*.js')
-    .pipe(plumber())
-    .pipe(uglify())
-    .pipe(concat('script.min.js'))
-    .pipe(gulp.dest(paths.build + 'js/'))
+      .pipe(plumber())
+      .pipe(rigger())
+      .pipe(gulp.dest(paths.build + 'js/'))
+      .pipe(uglify())
+      .pipe(rename({
+          suffix: ".min",
+          extname: ".js"
+      }))
+      .pipe(gulp.dest(paths.build + 'js/'))
+      .pipe(browserSync.stream());
 }
 
 function clean() {
