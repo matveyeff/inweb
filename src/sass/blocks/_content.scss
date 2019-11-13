@@ -4,4 +4,10 @@
 	justify-content: center;
 	flex: 1;
 	padding: 2rem 0;
+	&__title {
+		font-size: 1.875rem;
+		font-weight: 700;
+		color: $black;
+		margin: 0 0 1.875rem;
+	}
 }

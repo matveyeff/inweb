@@ -1,0 +1,31 @@
+.services {
+	margin-bottom: 2rem;
+	&__item {
+		position: relative;
+		height: 100%;
+		background-color: $white;
+		border-radius: $radius;
+		box-shadow: $shadow;
+		padding: 1.2rem;
+	}
+	&__icon {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		width: 50px;
+		height: 50px;
+		z-index: 1;
+	}
+	&__title {
+		font-size: 1.3125rem;
+		font-weight: 500;
+		color: $black;
+		padding-left: 5rem;
+		margin-top: .5rem;
+	}
+	&__text	{
+		font-size: .9375rem;
+		color: $black;
+		margin-top: 2rem;
+	}
+}

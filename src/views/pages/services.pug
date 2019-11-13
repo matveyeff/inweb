@@ -6,3 +6,29 @@ append config
 	- currentURL 	= 'services.html'
 
 block content
+	.container
+		h1.content__title Services
+		.services
+			.row
+				.col-lg-4
+					.services__item
+						svg.services__icon
+							use(xlink:href="./img/sprite.svg#layers")
+						.services__title Web-Design
+						.services__text
+							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius voluptatem dolores quas corporis, numquam voluptas modi obcaecati cum quibusdam minima error incidunt explicabo veniam veritatis. Labore saepe inventore reprehenderit laboriosam.
+				.col-lg-4
+					.services__item
+						svg.services__icon
+							use(xlink:href="./img/sprite.svg#responsive")
+						.services__title Front-End
+						.services__text
+							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius voluptatem dolores quas corporis, numquam voluptas modi obcaecati cum quibusdam minima error incidunt explicabo veniam veritatis.
+				.col-lg-4
+					.services__item
+						svg.services__icon
+							use(xlink:href="./img/sprite.svg#data")
+						.services__title Back-End
+						.services__text
+							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius voluptatem dolores quas corporis, numquam voluptas modi obcaecati cum quibusdam minima error incidunt explicabo veniam veritatis. Labore saepe inventore reprehenderit laboriosam. Labore saepe inventore reprehenderit laboriosam.
+		a.btn.btn--pink(href='#', data-toggle="modal", data-target="#requestModal") Send a request
