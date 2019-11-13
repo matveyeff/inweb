@@ -1,10 +1,25 @@
-div(class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true")
-  div(class="modal-dialog" role="document")
-    div(class="modal-content")
-      div(class="modal-header")
-        h5(class="modal-title" id="exampleModalLongTitle") Modal title
-        button(type="button" class="close" data-dismiss="modal" aria-label="Close"): span(aria-hidden="true") times
-      div(class="modal-body") ...
-      div(class="modal-footer")
-        button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
-        button(type="button" class="btn btn-primary") Save changes
+.modal.fade#requestModal(tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered(role="document")
+    .modal-content
+      button.modal__close(type="button" data-dismiss="modal" aria-label="Close")
+        svg.modal__close-icon
+          use(xlink:href=`./img/sprite.svg#times`)
+      .modal__title Send your request
+      .modal__text Fill out the form below and I will contact you shortly
+      form.form(action="/" method="POST")
+        .form__group
+          input.input(type="text" placeholder="Your name")
+        .form__group
+          input.input(type="email" placeholder="Your e-mail")
+        .form__group
+          input.input(type="tel" placeholder="Your phone")
+        .row
+          .col-lg-6
+            button.btn.btn--pink(type="submit") Send a request
+          .col-lg-6
+            .contacts.contacts--modal
+              ul.contacts__list
+                li.contacts__item
+                  a.contacts__link(hfref="tel: +12061123345") +1-206-112-3345
+                li.contacts__item
+                  a.contacts__link(href="mailto: hello@inweb.com") hello@inweb.com

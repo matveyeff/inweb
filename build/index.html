@@ -67,18 +67,41 @@
       <div class="circle"></div>
     </main>
     <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">times</span>
-            </button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
-            <button class="btn btn-primary" type="button">Save changes</button>
-          </div>
+          <button class="modal__close" type="button" data-dismiss="modal" aria-label="Close">
+            <svg class="modal__close-icon">
+              <use xlink:href="./img/sprite.svg#times"></use>
+            </svg>
+          </button>
+          <div class="modal__title">Send your request</div>
+          <div class="modal__text">Fill out the form below and I will contact you shortly</div>
+          <form class="form" action="/" method="POST">
+            <div class="form__group">
+              <input class="input" type="text" placeholder="Your name">
+            </div>
+            <div class="form__group">
+              <input class="input" type="email" placeholder="Your e-mail">
+            </div>
+            <div class="form__group">
+              <input class="input" type="tel" placeholder="Your phone">
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <button class="btn btn--pink" type="submit">Send a request</button>
+              </div>
+              <div class="col-lg-6">
+                <div class="contacts contacts--modal">
+                  <ul class="contacts__list">
+                    <li class="contacts__item"><a class="contacts__link" hfref="tel: +12061123345">+1-206-112-3345</a>
+                    </li>
+                    <li class="contacts__item"><a class="contacts__link" href="mailto: hello@inweb.com">hello@inweb.com</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
