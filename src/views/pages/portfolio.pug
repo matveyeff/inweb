@@ -1,8 +1,23 @@
 extends ../main.pug
 
 append config
-	- title	= 'Страница услуг'
-	- desc	= 'Описание страницы услуг'
+	- title	= 'Страница Портфолио'
+	- desc	= 'Описание страницы портфолио'
 	- currentURL 	= 'portfolio.html'
 
 block content
+	.container
+		h1.content__title Portfolio
+		.portfolio#portfolio
+			.portfolio__item
+				a.portfolio__link(href="#")
+					img.portfolio__img(src="img/portfolio/1.jpg", target="_blank", alt="project 1")
+				.portfolio__title Project's website CarTuning.pro
+			.portfolio__item
+				a.portfolio__link(href="#")
+					img.portfolio__img(src="img/portfolio/1.jpg", target="_blank", alt="project 1")
+				.portfolio__title Project's website CarTuning.pro
+			.portfolio__item
+				a.portfolio__link(href="#")
+					img.portfolio__img(src="img/portfolio/1.jpg", target="_blank", alt="project 1")
+				.portfolio__title Project's website CarTuning.pro
